@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+  
+  #sidebar {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+  
+  #overlay {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .fade {
+    transition: opacity 0.4s ease, filter 0.4s ease;
+  }
+  .fade-out {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  .fade-in {
+    opacity: 1;
+    filter: blur(0);
+  }

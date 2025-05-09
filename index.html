@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Pizzeria</title>
+</head>
+<body>
+    <header class="absolute w-full z-50" id="navbar">
+        <nav class="bg-black">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl lg:px-6 py-4">
+                <a href="./index.html" class="flex items-center cursor-pointer pl-4">
+                    <img src="./public/logoPizza.png" class="mr-3 h-10" alt="Pizzeria Logo" />
+                    <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Pizzeria</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-white rounded-lg lg:hidden focus:outline-none cursor-pointer focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Apri menu principale</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 text-xl text-white" id="mobile-menu-2">
+                    <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#chiSiamo" class="navLink block py-2 pr-4 pl-3  border-b border-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0">Chi siamo</a>
+                        </li>
+                        <li>
+                            <a href="#menu" class="navLink block py-2 pr-4 pl-3  border-b border-gray-100  lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#recensioni" class="navLink block py-2 pr-4 pl-3  border-b border-gray-100  lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0">Recensioni</a>
+                        </li>
+                        <li>
+                          <a href="#gallery" class="navLink block py-2 pr-4 pl-3  border-b border-gray-100  lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0">Gallery</a>
+                      </li>
+                        <li>
+                            <a href="#contatti" class="navLink block py-2 pr-4 pl-3  border-b border-gray-100  lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0">Contatti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </header>
+
+      <section
+      id="hero"
+      class="min-h-[calc(100vh-5rem)] bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./public/stone.jpg)] bg-cover bg-center relative"
+    >
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 pb-30 md:pb-60 z-10"
+      >
+        <h2
+          class="text-white font-serif italic text-4xl md:text-5xl lg:text-6xl mb-2"
+        >
+          Delizioso
+        </h2>
+        <h3 class="text-white font-serif text-3xl md:text-4xl lg:text-5xl mb-4">
+          Il Sapore di un Viaggio lungo
+          <span class="border-b-4 border-[#981515] pb-1">vent'anni</span>
+        </h3>
+        <p class="text-gray-300 max-w-md text-sm md:text-base">
+          Da oltre vent’anni portiamo avanti la nostra passione per la cucina
+          italiana. Da Delizioso la tradizione si fonde con un tocco moderno,
+          offrendo a tutta la famiglia una cucina semplice, con ingredienti
+          freschi e stagionali.
+        </p>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 z-0 overflow-hidden flex justify-center"
+      >
+        <img
+          class="w-full max-w-[800px] object-cover"
+          src="./public/pizza.png"
+          alt="Italian pizza"
+        />
+      </div>
+    </section>
+
+    <section id="chiSiamo" class="bg-[#eadac0]">
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="font-ligth sm:text-lg ">
+                <h2 class="text-black font-serif text-3xl md:text-4xl lg:text-5xl mb-16">I re della pizza</h2>
+                <p class="mb-4 font-serif text-black text-xl ">Benvenuti alla Pizzeria [Nome], dove tradizione e passione si incontrano per offrirvi il gusto autentico della vera pizza italiana. Ingredienti freschi, impasti lievitati naturalmente e una cottura perfetta nel forno a legna:</p>
+                <p class="font-serif text-black text-xl ">ogni pizza è un’esperienza da vivere. Vieni a trovarci e scopri il sapore della qualità!</p>
+            </div>
+            <div class="grid  grid-cols-2 gap-4 mt-8">
+                <img class="w-full rounded-lg" src="https://images.unsplash.com/photo-1606152196365-d1ce5ea838b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="office content 1">
+                <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="office content 2">
+            </div>
+        </div>
+    </section>
+
+    <section
+      id="menu"
+      class="bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./public/stone.jpg)] py-16 px-4 md:px-8"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-white font-serif text-3xl md:text-4xl lg:text-5xl mb-16 text-center"
+        >
+          Le nostre pizze più vendute
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-14 mb-16"
+        >
+          <div class="relative">
+            <h3 class="text-white text-3xl font-serif text-center mb-4">
+              Salamino
+            </h3>
+            <div class="relative">
+              <img
+                src="./public/pizza-menu.png"
+                alt="salamino"
+                class="max-w-[340px] w-full aspect-square object-contain mx-auto cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
+              />
+              <div
+                class="absolute bottom-2 right-10 text-white text-3xl font-bold"
+              >
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="text-gray-300 text-lg">Pomodoro, Mozzarella,</p>
+              <p class="text-gray-300 text-lg">
+                Salamino Piccante, Peperoncino
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <h3 class="text-white text-3xl font-serif text-center mb-4">
+              Capricciosa
+            </h3>
+            <div class="relative">
+              <img
+                src="./public/pizza-menu.png"
+                alt="Capricciosa Pizza"
+                class="max-w-[340px] w-full aspect-square object-contain mx-auto cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
+              />
+              <div
+                class="absolute bottom-2 right-10 text-white text-3xl font-bold"
+              >
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="text-gray-300 text-lg">Pomodoro, Mozzarella, Olive</p>
+              <p class="text-gray-300 text-lg">
+                Prosciutto cotto, Funghi, Carciofini
+              </p>
+            </div>
+          </div>
+          <div class="relative hidden md:block">
+            <h3 class="text-white text-3xl font-serif text-center mb-4">
+              Margherita
+            </h3>
+            <div class="relative">
+              <img
+                src="./public/pizza-menu.png"
+                alt="Margherita Pizza"
+                class="max-w-[340px] w-full aspect-square object-contain mx-auto cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
+              />
+              <div
+                class="absolute bottom-2 right-10 text-white text-3xl font-bold"
+              >
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="text-gray-300 text-lg">Pomodoro, Mozzarella,</p>
+              <p class="text-gray-300 text-lg">Basilico fresco</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+        <a href="./public/menu.pdf" download target="_blank">
+            <button
+            class="cursor-pointer bg-[#981515] text-white p-2 rounded-sm hover:bg-[#df3636]">
+            Scarica il Menù Completo
+          </button>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-[#eadac0] py-16 px-4 md:px-8" id="recensioni">
+        <div class="max-w-7xl mx-auto">
+          <h2
+          class="text-black font-serif text-3xl md:text-4xl lg:text-5xl mb-16 text-center"
+          >
+            Cosa dicono di noi
+          </h2>
+  
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div
+              class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            >
+              <blockquote
+                class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
+              >
+                "Non credevo di trovare una vera pizzeria napoletana a Udine,
+                oltre all’eccellente qualità della pizza abbiamo trovato anche la
+                gentilezza, la simpatia, l’attenzione e tutto il calore dello
+                spirito campano."
+              </blockquote>
+              <div class="mt-auto pt-3">
+                <p class="font-semibold text-gray-900">- Alex P.</p>
+                <div class="mt-2 text-amber-500 text-xl">★★★★★</div>
+              </div>
+            </div>
+  
+            <!-- Review 2 -->
+            <div
+              class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            >
+              <blockquote
+                class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
+              >
+                "Pizza buonissima con impasto molto leggero. Consigliato e di
+                sicuro ci ritornerò al più presto. Un plauso allo staff intero per
+                l'accoglienza!!"
+              </blockquote>
+              <div class="mt-auto pt-3">
+                <p class="font-semibold text-gray-900">- Jessica M.</p>
+                <div class="mt-2 text-amber-500 text-xl">★★★★★</div>
+              </div>
+            </div>
+  
+            <!-- Review 3 -->
+            <div
+              class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            >
+              <blockquote
+                class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
+              >
+                "Ottima scoperta! Pizza molto buona e personale molto cortese. Ci
+                tornerò sicuramente."
+              </blockquote>
+              <div class="mt-auto pt-3">
+                <p class="font-semibold text-gray-900">- David K.</p>
+                <div class="mt-2 text-amber-500 text-xl">★★★★☆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-[#eadac0]">
+        <div id="gallery" class="max-w-7xl mx-auto px-5 py-16 sm:py-24 ">
+            <h1 class="text-black font-serif text-3xl md:text-4xl lg:text-5xl mb-16 text-center">Galleria Fotografica</h1>
+            
+            <!-- Galleria a griglia -->
+            <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4">
+                <!-- Immagini della galleria con i tuoi URL -->
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1489564239502-7a532064e1c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Forno a legna" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1682264788192-9abdec90c425?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1600628421055-4d30de868b8f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1608562099373-69dd6b715cd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-sm:hidden">
+                    <img src="https://images.unsplash.com/photo-1499778003268-cbafc6d08bab?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <!-- Ripeto alcune immagini per riempire la griglia -->
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-sm:hidden">
+                    <img src="https://images.unsplash.com/photo-1489564239502-7a532064e1c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Forno a legna" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-sm:hidden">
+                    <img src="https://images.unsplash.com/photo-1682264788192-9abdec90c425?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-sm:hidden">
+                    <img src="https://images.unsplash.com/photo-1600628421055-4d30de868b8f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Immagine" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+      </div>
+      
+
+      <div
+      class="bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./public/stone.jpg)] py-16 px-4 md:px-8 border-t border-gray-800"
+        id="contatti">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-white font-serif text-3xl md:text-4xl lg:text-5xl mb-16 text-center"
+        >
+          Vieni a trovarci
+        </h2>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.5fr_2fr_2fr] gap-8 items-center"
+        >
+          <!-- Delivery Image (Left) -->
+          <div class="hidden md:flex justify-center items-center relative">
+            <img
+              src="./public/basil1.png"
+              alt="Pizza Delivery"
+              class="w-4/5 max-w-xs pr-10 transform"
+            />
+          </div>
+
+          <!-- Address and Hours (Middle) -->
+          <div
+            class="text-lg flex flex-col items-center sm:items-start text-center sm:text-left"
+          >
+            <p class="font-semibold text-white text-2xl mb-4">
+              Pizzeria Delizioso
+            </p>
+            <p class="mt-2 text-gray-300">
+              Via delle Scienze 206<br />
+              33100 Udine (UD)
+            </p>
+            <p class="mt-4 text-gray-300">
+              <span class="font-semibold text-white">Telefono:</span>
+              <a
+                href="tel:+19876543210"
+                class="text-[#df3636] hover:text-[#ff6500] ml-2"
+              >
+                (987) 654-3210
+              </a>
+            </p>
+            <p class="mt-4 text-gray-300">
+              <span class="font-semibold text-white">Orari di Apertura:</span
+              ><br />
+              Martedì - Domenica: 12:00 - 23:00<br />
+              Lunedì: Chiuso
+            </p>
+          </div>
+
+          <!-- Map Embed (Right) -->
+          <div
+            class="rounded-sm overflow-hidden border border-gray-800 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.964356342027!2d13.209315076164964!3d46.08063707911262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a3514687833d7%3A0xc7eb1bf414177fe7!2sVia%20delle%20Scienze%2C%20206%2C%2033100%20Udine%20UD!5e0!3m2!1sen!2sit!4v1714564846371!5m2!1sen!2sit"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="filter "
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#eadac0] pt-16 pb-10">
+        <div class="container mx-auto px-6 lg:px-8">
+          <!-- Centered Logo and Social Media -->
+          <div class="flex flex-col items-center text-center">
+            <div class="mb-6">
+              <a href="/" class="text-3xl font-script text-[#981515] font-serif"
+                >Delizioso</a
+              >
+              <p class="text-xs uppercase tracking-wide text-gray-600 mt-1">
+                Seguici sui Social!
+              </p>
+            </div>
+  
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 mt-4">
+              <!--Instagram Icon-->
+              <a
+                href="#"
+                class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#DD2A7B] hover:scale-120"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <!--Facebook logo-->
+              <a
+                href="#"
+                class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#1877F2] hover:scale-120"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  />
+                </svg>
+              </a>
+              <!-- TikTok Icon -->
+              <a
+                href="#"
+                class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-black hover:scale-120"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                  />
+                </svg>
+              </a>
+              <!-- TripAdvisor Icon -->
+              <a
+                href="#"
+                class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#00af87] hover:scale-120"
+              >
+                <img
+                  src="./public/tripadvisor-svgrepo-com.svg"
+                  alt="TripAdvisor"
+                  class="h-5 w-5 text-white invert"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Copyright Bar -->
+          <div
+            class="mt-16 pt-6 border-t border-gray-500 flex flex-col justify-center items-center text-gray-500 text-sm text-center"
+          >
+            <p>© 2025 Pizzeria Delizioso. All rights reserved.</p>
+            <p class="mt-2">
+              Website by
+              <a href="https://jeud.it/" target="_blank" class="hover:text-[#981515]">JEUD</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
