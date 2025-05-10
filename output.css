@@ -227,6 +227,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -308,9 +311,6 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
-  }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
@@ -322,6 +322,9 @@
   }
   .block {
     display: block;
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
@@ -347,23 +350,8 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-9 {
-    height: calc(var(--spacing) * 9);
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
-  }
-  .h-11 {
-    height: calc(var(--spacing) * 11);
-  }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
-  }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
@@ -371,11 +359,11 @@
   .h-full {
     height: 100%;
   }
+  .min-h-\[100dvh\] {
+    min-height: 100dvh;
+  }
   .min-h-\[100px\] {
     min-height: 100px;
-  }
-  .min-h-\[calc\(100vh-5rem\)\] {
-    min-height: calc(100vh - 5rem);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -529,9 +517,6 @@
   .bg-\[linear-gradient\(rgba\(0\,0\,0\,0\.2\)\,rgba\(0\,0\,0\,0\.2\)\)\,url\(\.\/public\/stone\.jpg\)\] {
     background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./public/stone.jpg);
   }
-  .bg-\[linear-gradient\(rgba\(0\,0\,0\,0\.2\)\,rgba\(0\,0\,0\,0\.2\)\)\,url\(stone\.jpg\)\] {
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg);
-  }
   .bg-cover {
     background-size: cover;
   }
@@ -604,9 +589,6 @@
   .text-center {
     text-align: center;
   }
-  .font-mono {
-    font-family: var(--font-mono);
-  }
   .font-serif {
     font-family: var(--font-serif);
   }
@@ -642,14 +624,6 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
-  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -657,10 +631,6 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .tracking-tight {
-    --tw-tracking: var(--tracking-tight);
-    letter-spacing: var(--tracking-tight);
   }
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
@@ -692,9 +662,6 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
-  }
-  .text-gray-800 {
-    color: var(--color-gray-800);
   }
   .text-gray-900 {
     color: var(--color-gray-900);
@@ -1069,11 +1036,6 @@
           color: var(--color-gray-300);
         }
       }
-    }
-  }
-  .dark\:text-white {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-white);
     }
   }
 }
